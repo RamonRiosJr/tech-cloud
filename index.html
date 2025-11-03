@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Technology Cloud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* This rule forces the background to be transparent, overriding parent styles */
+        /* This is useful if you embed it in another site (like Odoo), 
+           but for a standalone page, you might want a background color. */
+        html, body {
+            background-color: #111827; /* Added a dark background for standalone viewing */
+            color: #f3f4f6;
+            height: 100%;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        /* Container for the canvas */
+        #canvas-container {
+            width: 100%;
+            max-width: 48rem; /* 768px */
+            aspect-ratio: 1 / 1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Canvas element itself */
+        #techCanvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <div id="canvas-container">
+        <canvas id="techCanvas">
+            <p>In case you can't see this, your browser doesn't support HTML5 canvas.</p>
+        </canvas>
+    </div>
+
+    <!-- This is the list of tags that TagCanvas will use. It's hidden by default. -->
+    <div id="tags" class="hidden">
+        <ul>
+            <li><a href="#" style="color: #8A2BE2;">Odoo</a></li>
+            <li><a href="#" style="color: #39FF14;">Ubuntu</a></li>
+            <li><a href="#" style="color: #00FFFF;">SSH</a></li>
+            <li><a href="#" style="color: #FF00FF;">Cloud Computing</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Cybersecurity</a></li>
+            <li><a href="#" style="color: #39FF14;">Microsoft Solutions</a></li>
+            <li><a href="#" style="color: #00FFFF;">IT Support</a></li>
+            <li><a href="#" style="color: #FF00FF;">Server Maintenance</a></li>
+            <li><a href="#" style="color: #8A2BE2;">MobaXterm</a></li>
+            <li><a href="#" style="color: #39FF14;">Linux</a></li>
+            <li><a href="#" style="color: #00FFFF;">Networking</a></li>
+            <li><a href="#" style="color: #FF00FF;">Virtualization</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Python</a></li>
+            <li><a href="#" style="color: #39FF14;">JavaScript</a></li>
+            <li><a href="#" style="color: #00FFFF;">HTML5</a></li>
+            <li><a href="#" style="color: #FF00FF;">CSS3</a></li>
+            <li><a href="#" style="color: #8A2BE2;">PostgreSQL</a></li>
+            <li><a href="#" style="color: #39FF14;">Docker</a></li>
+            <li><a href="#" style="color: #00FFFF;">Git</a></li>
+            <li><a href="#" style="color: #FF00FF;">Firewalls</a></li>
+            <li><a href="#" style="color: #8A2BE2;">React</a></li>
+            <li><a href="#" style="color: #39FF14;">Kong</a></li>
+            <li><a href="#" style="color: #00FFFF;">Konga</a></li>
+            <li><a href="#" style="color: #FF00FF;">NGINX</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Infrastructure</a></li>
+            <li><a href="#" style="color: #39FF14;">Computer Repair</a></li>
+            <li><a href="#" style="color: #00FFFF;">Analytics</a></li>
+            <li><a href="#" style="color: #FF00FF;">SEO</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Windows Server</a></li>
+            <li><a href="#" style="color: #39FF14;">Active Directory</a></li>
+            <li><a href="#" style="color: #00FFFF;">Group Policy</a></li>
+            <li><a href="#" style="color: #FF00FF;">DNS</a></li>
+            <li><a href="#" style="color: #8A2BE2;">DHCP</a></li>
+            <li><a href="#" style="color: #8A2BE2;">AI</a></li>
+            <li><a href="#" style="color: #39FF14;">Cisco Switches</a></li>
+            <li><a href="#" style="color: #00FFFF;">VLANs</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Automation</a></li>
+            <li><a href="#" style="color: #FF00FF;">pfSense</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Fortinet</a></li>
+            <li><a href="#" style="color: #39FF14;">SonicWall</a></li>
+            <li><a href="#" style="color: #00FFFF;">VPN</a></li>
+            <li><a href="#" style="color: #8A2BE2;">LLM</a></li>
+            <li><a href="#" style="color: #FF00FF;">PowerShell</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Bash Scripting</a></li>
+            <li><a href="#" style="color: #39FF14;">VMware ESXi</a></li>
+            <li><a href="#" style="color: #00FFFF;">Hyper-V</a></li>
+            <li><a href="#" style="color: #FF00FF;">Proxmox</a></li>
+            <li><a href="#" style="color: #8A2BE2;">AWS</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Ollama</a></li>
+            <li><a href="#" style="color: #39FF14;">Microsoft Azure</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Open Source</a></li>
+            <li><a href="#" style="color: #00FFFF;">Google Cloud</a></li>
+            <li><a href="#" style="color: #FF00FF;">Office 365</a></li>
+            <li><a href="#" style="color: #8A2BE2;">ChatGPT</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Exchange Server</a></li>
+            <li><a href="#" style="color: #39FF14;">SharePoint</a></li>
+            <li><a href="#" style="color: #00FFFF;">Dell Servers</a></li>
+            <li><a href="#" style="color: #FF00FF;">HP Servers</a></li>
+            <li><a href="#" style="color: #8A2BE2;">RAID</a></li>
+            <li><a href="#" style="color: #39FF14;">SAN/NAS</a></li>
+            <li><a href="#" style="color: #00FFFF;">Backup &amp; Recovery</a></li>
+            <li><a href="#" style="color: #FF00FF;">Veeam</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Acronis</a></li>
+            <li><a href="#" style="color: #39FF14;">TCP/IP</a></li>
+            <li><a href="#" style="color: #00FFFF;">Subnetting</a></li>
+            <li><a href="#" style="color: #FF00FF;">Wi-Fi</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Ubiquiti</a></li>
+            <li><a href="#" style="color: #39FF14;">VoIP</a></li>
+            <li><a href="#" style="color: #00FFFF;">Asterisk</a></li>
+            <li><a href="#" style="color: #FF00FF;">Help Desk</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Zabbix</a></li>
+            <li><a href="#" style="color: #39FF14;">Grafana</a></li>
+            <li><a href="#" style="color: #00FFFF;">ITIL</a></li>
+            <li><a href="#" style="color: #FF00FF;">Jira</a></li>
+            <li><a href="#" style="color: #8A2BE2;">Confluence</a></li>
+            <li><a href="#" style="color: #39FF14;">Ansible</a></li>
+            <li><a href="#" style="color: #00FFFF;">Kubernetes</a></li>
+            <li><a href="#" style="color: #FF00FF;">API Gateways</a></li>
+            <li><a href="#" style="color: #8A2BE2;">REST APIs</a></li>
+            <li><a href="#" style="color: #39FF14;">SQL Server</a></li>
+            <li><a href="#" style="color: #00FFFF;">MySQL</a></li>
+        </ul>
+    </div>
+
+    <!-- This is the TagCanvas script -->
+    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+    
+    <script>
+        // Wait for the window to load before starting the animation
+        window.onload = function() {
+            // Using a setTimeout to delay the execution slightly.
+            // This helps ensure the container div has its final size before we initialize the canvas.
+            setTimeout(function() {
+                try {
+                    // Manually trigger a resize first to set the canvas size
+                    const canvas = document.getElementById('techCanvas');
+                    const container = document.getElementById('canvas-container');
+                    if (container && canvas) {
+                        canvas.width = container.offsetWidth;
+                        canvas.height = container.offsetHeight;
+                    }
+
+                    // Configuration for TagCanvas
+                    TagCanvas.Start('techCanvas', 'tags', {
+                        textColour: null, // Use the color from the <a> tag
+                        outlineMethod: 'colour',
+                        outlineColour: 'transparent',
+                        outlineOffset: 0,
+                        reverse: true,
+                        depth: 0.8,
+                        maxSpeed: 0.05,
+                        initial: [0.05, -0.05],
+                        textFont: 'Inter, sans-serif',
+                        textHeight: 22,
+                        fontWeight: '600',
+                        wheelZoom: false,
+                        noSelect: true,
+                        stretchX: 1,
+                        stretchY: 1,
+                        activeCursor: 'pointer',
+                        dragControl: true,
+                    });
+
+                    // --- Hover Effect to Scramble/Speed Up ---
+                    const canvasContainer = document.getElementById('canvas-container');
+                    const normalSpeed = [0.05, -0.05];
+                    const scrambleSpeed = [0.2, 0.2]; // A faster speed for the hover effect
+
+                    canvasContainer.addEventListener('mouseover', function() {
+                        TagCanvas.SetSpeed('techCanvas', scrambleSpeed);
+                    });
+
+                    canvasContainer.addEventListener('mouseout', function() {
+                        TagCanvas.SetSpeed('techCanvas', normalSpeed);
+                    });
+
+                } catch(e) {
+                    // If TagCanvas fails, hide the canvas container
+                    document.getElementById('canvas-container').style.display = 'none';
+                    console.error("TagCanvas failed to start:", e);
+                }
+            }, 100); // 100ms delay.
+        };
+        
+        // Ensure the canvas resizes if the window size changes
+        window.addEventListener('resize', function() {
+            const canvas = document.getElementById('techCanvas');
+            const container = document.getElementById('canvas-container');
+            if (container && canvas) {
+                // Check if container has a valid size
+                if (container.offsetWidth > 0 && container.offsetHeight > 0) {
+                    canvas.width = container.offsetWidth;
+                    canvas.height = container.offsetHeight;
+                    TagCanvas.Update('techCanvas');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
