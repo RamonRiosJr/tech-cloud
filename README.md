@@ -8,7 +8,7 @@ Live Demo
 
 You can view the live demo of this project here:
 
-https://[YOUR_USERNAME].github.io/[YOUR_REPO_NAME]/
+https://ramonriosjr.github.io/tech-cloud/
 
 (You will need to replace [YOUR_USERNAME] and [YOUR_REPO_NAME] with your actual GitHub username and repository name after you host it).
 
